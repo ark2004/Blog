@@ -1,3 +1,9 @@
+<!-- 
+Body = #DFF6FF 
+container = #06283D 
+text = #1363DF 
+extra/highlight = #47B5FF  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,16 +19,17 @@
         }
         #Navigation{
             width: 100%;
-            background-color: green;
             height: fit-content;
+            background-color: #06283D;
             justify-content: left;
         }
         .topNavigation a{
-            display: inline-block;
+            position: sticky;
+            display:inline-flex;
             text-align: center;
             padding: 14px 16px;
             font-size: 17px;
-            color: blanchedalmond;
+            color: #DFF6FF;
             text-decoration: none;
         }
         #Navigation a:hover{
@@ -30,17 +37,43 @@
            background-color: darkgreen;
         }
         #Body{
+            position:relative;
             display: block;
             width: 100%;
             height: 100vh;
-            background-color: rgb(128 128 128);
+            background-color: #DFF6FF;
+            text-align: center;
+            justify-content: center;
+        }
+        .emphasis{
+            text-decoration: underline;
         }
         #Main-Content{
-            display: inline-block;
+            /* display: absolute; */
+            width:100%;
+            height: 550px;
+            font-size: 80px;
         }
-        /* .container{
-
-        } */
+        #text-box{
+            width: 35%;
+            padding: 10px;
+            height: fit-content;
+            margin: 20px;
+            display:inline-block;
+            background-color: #06283D;
+            color: #DFF6FF;
+            border-radius: 15px;
+        }
+        @keyframes example {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+        }
+        #text-box:hover{
+            box-shadow: 8px 8px 15px #47B5FF;
+        }
+        
     </style>
 </head>
 <body>
@@ -51,12 +84,21 @@
     </div>
     <div id="Body">
         <div id="Main-Content">
-            <p>Hi! I am <span id="Emphasis">A. R. K.</span></p>
+            <p>Hi! I am <span class="emphasis">A. R. K.</span></p>
         </div>
         <div id="Text-Container">
-            <div id="text-box" class="textBox1"></div>
-            <div id="text-box" class="textBox2"></div>
-            <div id="text-box" class="textBox3"></div>
+            <div id="text-box" class="textBox1">
+                <h1>Learn</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam tempora reprehenderit beatae recusandae asperiores aperiam doloribus officia minima obcaecati perspiciatis eius, quaerat suscipit omnis distinctio cumque quia voluptatem, consectetur fugit! Quia explicabo itaque sequi labore?</p>
+            </div>
+            <div id="text-box" class="textBox2">
+                <h1>Blog</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam tempora reprehenderit beatae recusandae asperiores aperiam doloribus officia minima obcaecati perspiciatis eius, quaerat suscipit omnis distinctio cumque quia voluptatem, consectetur fugit! Quia explicabo itaque sequi labore?</p>
+            </div>
+            <div id="text-box" class="textBox3">
+                <h1>About me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam tempora reprehenderit beatae recusandae asperiores aperiam doloribus officia minima obcaecati perspiciatis eius, quaerat suscipit omnis distinctio cumque quia voluptatem, consectetur fugit! Quia explicabo itaque sequi labore?</p>
+            </div>
             <div id="text-box" class="textBox4"></div>
             <div id="text-box" class="textBox5"></div>
         </div>
